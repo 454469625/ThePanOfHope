@@ -3,16 +3,9 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class Main {
-    //需要改变运算顺序的种类有：
-    //1.a+b+c*d
-    //2.a+b*c+d
-    //3.a+b*c*d
-    //4.a*b+c*d
-
-
     public static void main(String[] args) {
         int[] num = new int[4];
-        char[] operate = new char[]{'+','-','x','÷'};
+        char[] operate = new char[]{'＋','—','×','÷'};
         int answer;
         Random r = new Random();
         Random r1 = new Random();
@@ -21,12 +14,14 @@ public class Main {
         Scanner in = new Scanner(System.in);
         int o = in.nextInt();
         */
-        for (int i = 0;i<4;i++ ) {
-            //nextInt()里面的数字是表示随机数的最大值，之后用输入代替，
-            num[i] = r.nextInt(10);
-            System.out.println("the number["+i+"] is "+num[i]);
+        for (int j = 0; j < 5; j++) {
+            for (int i = 0;i<4;i++ ) {
+                //nextInt()里面的数字是表示随机数的最大值，之后用输入代替，
+                num[i] = r.nextInt(10);
+            }
+            //没有排除0作为分子的情况，没有将结果计算出来
+            System.out.println(""+ num[0] +" "+ operate[r1.nextInt(4)] +" "+ num[1] +" "+ operate[r1.nextInt(4)] +" "+ num[2] +"=");
         }
-        System.out.println(""+num[0]+ operate[r1.nextInt(4)]+num[1]+operate[r1.nextInt(4)]+num[2]+"=");
         //用随机数在数组中随机选取加减乘除
         /*
         switch (opeartion) {
