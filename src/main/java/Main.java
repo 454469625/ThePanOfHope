@@ -1,5 +1,5 @@
 import java.util.Random;
-/*
+/*asdasdasddasad
     还缺什么功能呢：不能除以0的判断没有完成
                     括号功能没有完成
                     计算答案功能，输出到文件的功能
